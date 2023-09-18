@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div class="block glow"></div>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+    }
+
+    div {
+        width: 200px;
+        height: 200px;
+        box-shadow: 16px 14px 20px #0000008c;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    div::before{
+        content: "";
+        background-image: conic-gradient(
+            #ff0052 20deg,
+            transparent 120deg
+        );
+        width: 150%;
+        height: 150%;
+        position: absolute;
+        animation: rotate 2s linear infinite;
+    }
+    div::after{
+        content: "Animation";
+        width: 190px;
+        height: 190px;
+        background: #101010;
+        position: absolute;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ff0052;
+        font-size: larger;
+        letter-spacing: 5px;
+        box-shadow: inset 20px 20px 20px #0000008c;
+    }
+    @keyframes rotate {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(-360deg);
+        }
+    }
+</style>
+
+<style>
+  .block{
+    position: relative;
+    width: 50%;
+    height: 400px;
+    margin: 100% auto 0;
+    background: url(/img/course/3dpen.jpg);
+    background-size: cover;
+    background-repeat: no-repeat ;
+    border-radius: 20px;
+  }
+
+  .glow::before, .glow::after{
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;  
+    background: linear-gradient(
+      -45deg,
+      #00ff66,
+      #00ffff,
+      #ff00ff,
+      #ff0099,
+      #099fff
+    );
+    background-size: 400%;
+    height: calc(100% + 5px);
+    width: calc(100% + 5px);
+    z-index: -1;
+    animation: change 40s linear infinite;
+    border-radius: 20px;
+  }
+
+  @keyframes change{
+    0%{
+      background-position: 0 0;
+    }
+    50%{
+      background-position: 400% 0;
+    }
+    100%{
+      background-position: 0 0;
+    }
+  }
+ 
+ .glow::after{
+    filter: blur(40px);
+    opacity: .5;
+ }
+</style>
+
+<body>
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  
+  border: 1px solid red;
+  justify-content: center;
+}
+
+.logo {
+
+ 
+  
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;                             
+  margin-left: 30%;
+  margin-right: 10%;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font: rgba(15, 14, 14, 0.089);
+  border: 1px solid red;
+  padding-left: 20px;
+  padding-top: 20px;
+  font-family: cursive;
+}
+
+img {
+  width: 15rem;
+  display: flex;
+  
+  
+  border-radius: 50%;
+  
+}
+
+.course {
+  margin-top: 40px;
+  border: 1px solid red;
+}
+
+body {
+  animation: transitionIn 5s;
+  background-color: rgba(255, 255, 255, 0.716);
+}
+
+table,
+td,
+th {
+  border: 1px solid rgb(12, 7, 255);
+  border-collapse: collapse;
+  margin: auto;
+  font-family: cursive;
+  font-size: 20px;
+}
+
+
+
+table#ttt tr:nth-child(even) {
+  background-color: rgba(174, 172, 255, 0.663);
+}
+
+table#ttt tr:nth-child(odd) {
+  background-color: rgb(255, 255, 255);
+}
+
+table#ttt th {
+  background: rgb(44, 75, 253);
+  color: rgb(0, 0, 0);
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+
+section .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-image: url(/img/wave.png);
+
+  background-size: 1000px 100px;
+}
+
+section .wave.wave1 {
+  animation: animate 30s linear infinite;
+  z-index: 1000;
+  animation-delay: 0s;
+  bottom: 0;
+}
+
+section .wave.wave2 {
+  animation: animate 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+
+section .wave.wave3 {
+  animation: animate 30s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15;
+}
+
+section .wave.wave4 {
+  animation: animate 5s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -1000px;
+  }
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

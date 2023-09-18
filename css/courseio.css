@@ -1,0 +1,82 @@
+
+.header {
+    display: flex;
+    border: 1px solid red;
+    justify-content: center;
+    
+}
+
+.logo {
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+
+a {
+    width: 8%;
+}
+
+.header h1 {
+    font-size: 20px;
+    font: rgba(15, 14, 14, 0.089);
+    border: 1px solid red;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-family: cursive;
+  }
+
+.header img {
+    width: 35%;
+    display: flex;
+    border: solid;
+    border-color: skyblue;
+    border-radius: 10%;
+    margin-left: 30%;
+}
+.course {
+    margin-top: 40px;
+    border: 1px solid red;
+}
+
+body {
+    background-color: rgb(255, 244, 224);
+    animation: transitionIn 5s;
+}
+
+table,td,th {
+    border: 1px solid rgb(255, 136, 51);
+    border-collapse: collapse;
+    margin: auto;
+    font-family: cursive;
+    font-size: 20px;
+}
+
+
+
+table#tt tr:nth-child(even) {
+    background-color: rgb(255, 238, 172);
+}
+
+table#tt tr:nth-child(odd) {
+    background-color: rgb(255, 255, 255);
+}
+
+table#tt th {
+    background: rgb(255, 167, 35);
+    color: rgb(0, 0, 0);
+}
+
+@keyframes transitionIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10deg);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
